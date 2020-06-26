@@ -1,6 +1,5 @@
 import { ADD_PRODUCT_BASKET} from './types';
-
-export const addBasket = () => {
+const addBasket = () => {
     return (dispatch) => {
         console.log("Adding to Basket");
         dispatch({
@@ -8,3 +7,6 @@ export const addBasket = () => {
         });
     }
 }
+
+
+export default addBasket;

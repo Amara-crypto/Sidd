@@ -4,40 +4,35 @@ import smartphone2 from '../images/s20.jpg';
 import smartphone3  from '../images/sim-negro.jpg';
 import smartphone4  from '../images/s20.jpg';
 import {connect} from 'react-redux';
-import {addBasket} from '../actions/addAction';
+import addBasket from '../actions/addAction';
+const items = [{name: 'Samsung', price:30000, image:smartphones},
+{name: 'Iphone', price:40000, image:smartphone2},
+{name: 'Nokia', price:50000, image:smartphone3},
+]
 
-const Home =(props) =>{
-     console.log(props)
+class Home extends React.Component {
+     // eslint-disable-next-line no-useless-constructor
 
-    return(
-       <div className="container"> 
-           <div className="image">
-                <img src={smartphones} alt="Black Iphone" />
-                <h3>Grey Iphone</h3>
-                <h3>$ 150.00</h3>
-                <a onClick={props.addBasket}className="addToCart cart1" href="#">Add to Cart</a>
-           </div>
-           <div className="image">
-                <img src={smartphone2} alt="Blue S8" />
-                <h3>Blue Samsung S8</h3>
-                <h3>$ 200.00</h3>
-                <a onClick={props.addBasket} className="addToCart cart2 " href="#">Add to Cart</a>
-           </div>
-           <div className="image">
-                <img src={smartphone3} alt="Black Note 4" />
-                <h3>smasung Note 4</h3>
-                <h3>$ 199.00</h3>
-                <a onClick={props.addBasket} className="addToCart cart3" href="#">Add to Cart</a>
-           </div>
-           <div className="image">
-                <img src={smartphone4} alt="S7" />
-                <h3>Samsung s7</h3>
-                <h3>$ 500.00</h3>
-                <a onClick={props.addBasket} className="addToCart cart4" href="#">Add to Cart</a>
-           </div>
-           
-       </div>
-    );
+     addToCart(item){
+          alert(item.name)
+     }
+     render(){
+          return(
+               <div className="container"> 
+               {items.map((item)=>(
+                    <div className="image">
+                         <img src={item.image} alt={item.name} />
+                         <h3>{item.name}</h3>
+                         <h3>{item.price}</h3>
+                         <a onClick={()=>this.addToCart(item)} className="addToCart cart1" href="#">Add me to Cart</a>
+                    </div>
+               ))}
+
+               </div>
+          )
+     }
+
 }
 
-export default connect(null,{addBasket})(Home);
+//export default connect(null,{addBasket})(Home);
+export default Home;
