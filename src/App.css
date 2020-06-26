@@ -5,8 +5,7 @@
   font-family: 'Roboto',sans-serif;
 }
 header{
- 
-  background-image: url('./images/mobile-phones-banner.JPG');
+  background-color: dodgerblue;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -72,10 +71,10 @@ li a{
   overflow: hidden;
 }
 .addToCart{
-  position: absolute;
+  position: relative;
   width: 100%;
   background-color: darkgray;
-  transition: all 0.s ease-in-out;
+  transition: all 0.3s ease-in-out;
   opacity: 0;
   cursor: pointer;
   text-align: center;
@@ -85,7 +84,7 @@ li a{
 .image:hover .cart3,
 .image:hover .cart4
 {
-  bottom:50px;
+  bottom: 50px;
   opacity: 1;
   padding: 10px;
   text-decoration: none;
