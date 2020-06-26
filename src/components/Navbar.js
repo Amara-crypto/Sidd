@@ -3,6 +3,7 @@ import {connect } from 'react-redux'
 import{getNumbers} from '../actions/getAction';
 
 function Navbar(props){
+  console.log(props);
     return(
         <header>
         <div className="overlay"></div>
@@ -13,7 +14,7 @@ function Navbar(props){
             <li>About</li>
             <li>
             <ion-icon name="cart-outline"></ion-icon>
-              Cart<span>{props.basketProps}</span></li>
+              Cart<span></span></li>
           </ul>
         </nav>
       </header>
