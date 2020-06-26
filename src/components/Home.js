@@ -15,25 +15,25 @@ const Home =(props) =>{
                 <img src={smartphones} alt="Black Iphone" />
                 <h3>Grey Iphone</h3>
                 <h3>$ 150.00</h3>
-                <a className="addToCart cart1" href="#">Add to Cart</a>
+                <a onClick={props.addBasket}className="addToCart cart1" href="#">Add to Cart</a>
            </div>
            <div className="image">
                 <img src={smartphone2} alt="Blue S8" />
                 <h3>Blue Samsung S8</h3>
                 <h3>$ 200.00</h3>
-                <a  className="addToCart cart2 " href="#">Add to Cart</a>
+                <a onClick={props.addBasket} className="addToCart cart2 " href="#">Add to Cart</a>
            </div>
            <div className="image">
                 <img src={smartphone3} alt="Black Note 4" />
                 <h3>smasung Note 4</h3>
                 <h3>$ 199.00</h3>
-                <a  className="addToCart cart3" href="#">Add to Cart</a>
+                <a onClick={props.addBasket} className="addToCart cart3" href="#">Add to Cart</a>
            </div>
            <div className="image">
                 <img src={smartphone4} alt="S7" />
                 <h3>Samsung s7</h3>
                 <h3>$ 500.00</h3>
-                <a  className="addToCart cart4" href="#">Add to Cart</a>
+                <a onClick={props.addBasket} className="addToCart cart4" href="#">Add to Cart</a>
            </div>
            
        </div>
