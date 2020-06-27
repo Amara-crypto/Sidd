@@ -8,6 +8,7 @@ import addBasket from '../actions/addAction';
 const items = [{name: 'Samsung', price:30000, image:smartphones},
 {name: 'Iphone', price:40000, image:smartphone2},
 {name: 'Nokia', price:50000, image:smartphone3},
+{name: 'Samsung S9', price:90000, image:smartphone4},
 ]
 
 class Home extends React.Component {
@@ -29,6 +30,7 @@ class Home extends React.Component {
                ))}
 
                </div>
+
           )
      }
 
