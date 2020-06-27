@@ -14,8 +14,10 @@ function App() {
     <div className="App">
       <BrowserRouter>
       <Navbar/>
-      <Route path="/" component={Home}/>
+      <Switch>
+      <Route exact path="/" component={Home}/>
       <Route path="/cart" component={Cart}/>
+      </Switch>
       </BrowserRouter>
      
     

@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import {connect } from 'react-redux'
 import{getNumbers} from '../actions/getAction';
 
@@ -10,8 +11,8 @@ function Navbar(props){
         <nav>
           <h2>Shop</h2>
           <ul>
-            <li>Home</li>
-            <li>About</li>
+            <li><Link>Home</Link></li>
+            <li><Link>About</Link></li>
             <li>
             <ion-icon name="cart-outline"></ion-icon>
               Cart<span></span></li>
