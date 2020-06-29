@@ -13,7 +13,10 @@ const items = [{name: 'Samsung', price:30000, image:smartphones},
 
 class Home extends React.Component {
      // eslint-disable-next-line no-useless-constructor
-
+     constructor(props){
+          super(props);
+          this.state={}
+     }
      addToCart(item){
           alert(item.name)
      }
@@ -36,5 +39,4 @@ class Home extends React.Component {
 
 }
 
-//export default connect(null,{addBasket})(Home);
-export default Home;
+export default connect(null,{addBasket})(Home);

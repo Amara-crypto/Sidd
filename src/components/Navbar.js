@@ -1,24 +1,27 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import {Link} from 'react-router-dom';
 import {connect } from 'react-redux'
 import{getNumbers} from '../actions/getAction';
 
+
 function Navbar(props){
   console.log(props);
+
+  useEffect(() => {
+    getNumbers();
+  }, []);
     return(
         <header>
         <div className="overlay"></div>
         <nav>
           <h2>Shop</h2>
           <ul>
-            <li><Link>Home</Link></li>
-            <li><Link>About</Link></li>
-            <li>
-            <ion-icon name="cart-outline"></ion-icon>
-              Cart<span></span></li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/about">About</Link></li>
+            <li className="cart"><Link to="cart"><ion-icon name="cart-outline"></ion-icon>Cart<span>{props.basketProps.basketState}</span></Link> </li>
           </ul>
         </nav>
-      </header>
+      </header>  
     );
 }
 
