@@ -13,12 +13,8 @@ const items = [{name: 'Samsung', price:30000, image:smartphones},
 
 class Home extends React.Component {
      // eslint-disable-next-line no-useless-constructor
-     constructor(props){
-          super(props);
-          this.state={}
-     }
-     addToCart(item){
-          alert(item.name)
+   
+     handleClick = (name)=>{this.props.addBasket(name);
      }
      render(){
           return(
@@ -28,7 +24,7 @@ class Home extends React.Component {
                          <img src={item.image} alt={item.name} />
                          <h3>{item.name}</h3>
                          <h3>{item.price}</h3>
-                         <a onClick={()=>this.addToCart(item)} className="addToCart cart1" href="#">Add me to Cart</a>
+                         <a onClick={()=>{this.handleClick(item.name)}} className="addToCart cart1" href="#">Add me to Cart</a>
                     </div>
                ))}
 
