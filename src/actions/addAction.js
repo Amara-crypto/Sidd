@@ -4,7 +4,8 @@ const addBasket = (productName) => {
         console.log("Adding to Basket");
         console.log("Product: ", productName)
         dispatch({
-            type:ADD_PRODUCT_BASKET
+            type:ADD_PRODUCT_BASKET,
+            payload:productName
         });
     }
 }

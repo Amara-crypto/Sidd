@@ -8,7 +8,7 @@ import addBasket from '../actions/addAction';
 const items = [{name: 'Samsung', price:300, image:smartphones},
 {name: 'Iphone', price:400, image:smartphone2},
 {name: 'Nokia', price:500, image:smartphone3},
-{name: 'Samsung S9', price:900, image:smartphone4},
+{name: 'Samsung_S9', price:900, image:smartphone4},
 ]
 
 class Home extends React.Component {

@@ -61,4 +61,4 @@ function Cart(basketProps){
         basketProps: state.basketState
     });
 
-export default connect(mapStateToProps) (Cart)
+export default connect(mapStateToProps) (Cart);
