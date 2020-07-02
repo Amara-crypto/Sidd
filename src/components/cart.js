@@ -19,13 +19,14 @@ function Cart(basketProps){
         console.log(productsInCart)
     });
 
-    const productImages = []
+    const productImages = [smartphones, smartphone2, smartphone3, smartphone4]
 
     productsInCart = productsInCart.map( (product, index) => {
         console.log("My product is");
+        console.log(product);
         return (
             <Fragment>
-                <div className="product"><ion-icon name="close-circle"><img src={productImages[index]}/></ion-icon>
+                <div className="product"><ion-icon name="close-circle"></ion-icon> <img src={productImages[index]} alt="description of phones"/>
                     <span className="sm.hide">{product.name}</span>
                 </div>
                 <div className="sm-hide">${product.price},00</div>
@@ -39,8 +40,20 @@ function Cart(basketProps){
         )})
 
     return (
-        <div>
-            <h1>this is cart</h1>
+        <div className="container-products">
+            <div className="product-header">
+                <h5 className="product-title">PRODUCT</h5> 
+                <h5 className="price-sm-hide">PRICE</h5> 
+                <h5 className="quantity">QUANTITY</h5> 
+                <h5 className="total">TOTAL</h5> 
+            </div>
+            <div className="products">
+                {productsInCart}
+            </div>
+            <div className="basketTotalContainer">
+                <h4 className="basketTotalTitle">Basket Total </h4>
+                <h4 className="basketTotal">{basketProps.cartcost},00 </h4>
+            </div>
         </div>
     )
 } 
